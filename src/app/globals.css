@@ -1,0 +1,111 @@
+@import "tailwindcss";
+@config "../../tailwind.config.js";
+
+@theme {
+  --color-brand-dark: #0B0F19;
+  --color-brand-accent: #00F0FF;
+  --color-brand-light: #F8FAFC;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #030712;
+  background-image: radial-gradient(circle at 50% -20%, #0F172A 0%, #020617 80%);
+  color: #F8FAFC;
+  font-family: var(--font-inter), 'Inter', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, rgba(0, 240, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 240, 255, 0.035) 1px, transparent 1px);
+}
+
+/* Custom Keyframe Animations */
+@keyframes ticker {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-33.3333%, 0, 0);
+  }
+}
+
+.animate-ticker {
+  animation: ticker 30s linear infinite;
+}
+
+.animate-ticker:hover {
+  animation-play-state: paused;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 1.6s infinite linear;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.45s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+}
+
+@keyframes slowSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-slow-spin {
+  animation: slowSpin 22s linear infinite;
+}
+
+@keyframes textReveal {
+  from {
+    transform: translateY(22px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-text-reveal {
+  animation: textReveal 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.hover-letter-spacing {
+  transition: letter-spacing 0.35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.hover-letter-spacing:hover {
+  letter-spacing: 0.05em;
+}

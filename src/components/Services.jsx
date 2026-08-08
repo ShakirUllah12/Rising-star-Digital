@@ -1,4 +1,7 @@
+"use client";
+
 import React, { useState } from 'react';
+import Image from 'next/image';
 
 const services = [
   {
@@ -143,16 +146,24 @@ function Services() {
         <div className="relative w-full min-h-[500px] lg:min-h-[700px] flex flex-col lg:flex-row rounded-3xl border border-white/10 overflow-hidden bg-[#0B0F19] shadow-2xl isolation-isolate">
           
           {/* Background Images Crossfade */}
-          <div className="absolute inset-0 z-[-3] pointer-events-none">
+          <div className="absolute inset-0 z-[-3] pointer-events-none overflow-hidden">
             {services.map((service, idx) => (
               <div
                 key={idx}
-                className="absolute inset-0 transition-opacity duration-700 ease-in-out bg-cover bg-center"
+                className="absolute inset-0 transition-opacity duration-700 ease-in-out"
                 style={{
-                  backgroundImage: `url(${service.image})`,
                   opacity: activeIdx === idx ? 0.28 : 0
                 }}
-              />
+              >
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  sizes="100vw"
+                  priority={idx === 0}
+                  className="object-cover"
+                />
+              </div>
             ))}
           </div>
 

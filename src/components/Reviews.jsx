@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 const reviews = [
   {
@@ -68,9 +69,11 @@ function Reviews() {
 
               {/* Client Info */}
               <div className="flex items-center gap-4 pt-6 border-t border-white/5">
-                <img 
+                <Image 
                   src={rev.avatar} 
                   alt={rev.name} 
+                  width={40}
+                  height={40}
                   className="w-10 h-10 rounded-full border border-white/10 object-cover"
                 />
                 <div className="text-left">

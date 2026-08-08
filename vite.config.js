@@ -1,7 +1,2 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import tailwindcss from '@tailwindcss/vite'
-
-export default defineConfig({
-  plugins: [react(), tailwindcss()],
-})
+// Deprecated: Project migrated to Next.js. Configured via next.config.mjs.
+export default {};
