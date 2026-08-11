@@ -1,4 +1,3 @@
-import React from 'react';
 
 const steps = [
   {
@@ -48,7 +47,7 @@ function Process() {
 
         {/* Grid Timeline */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {steps.map((step, idx) => (
+          {steps.map((step) => (
             <div 
               key={step.num} 
               className="bg-[#1e1133]/40 backdrop-blur-md border border-white/5 hover:border-brand-accent/25 rounded-3xl p-6 relative overflow-hidden group transition-all duration-500 hover:-translate-y-2 flex flex-col justify-between"

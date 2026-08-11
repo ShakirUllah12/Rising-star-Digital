@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 function CustomCursor() {
   const [position, setPosition] = useState({ x: 0, y: 0 });

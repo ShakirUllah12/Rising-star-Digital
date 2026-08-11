@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 function Contact() {
   const [formData, setFormData] = useState({
