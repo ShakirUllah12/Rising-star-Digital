@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import Image from 'next/image';
+
 
 const servicesList = [
   {
@@ -153,12 +153,10 @@ function Navbar() {
               {/* Right Column: Interactive Preview Panel */}
               <div className="col-span-3 flex flex-col rounded-2xl bg-white/5 border border-white/5 p-4 justify-between overflow-hidden">
                 <div className="w-full h-24 rounded-lg overflow-hidden mb-3 relative bg-[#1b1228] border border-white/5">
-                  <Image 
+                  <img 
                     src={activeService.image} 
                     alt={activeService.title} 
-                    fill
-                    sizes="(max-width: 768px) 100vw, 300px"
-                    className="object-cover transition-all duration-300"
+                    className="absolute inset-0 w-full h-full object-cover transition-all duration-300"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-[#160d25] to-transparent opacity-40"></div>
                 </div>

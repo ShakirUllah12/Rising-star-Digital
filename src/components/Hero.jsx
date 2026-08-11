@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
+
 
 function Hero() {
   const [hoverOffset, setHoverOffset] = useState({ x: 0, y: 0 });
@@ -180,26 +180,26 @@ function Hero() {
           {/* Reviews / Social Proof */}
           <div className="flex items-center gap-4">
             <div className="flex -space-x-3">
-              <Image
+              <img
                 className="w-10 h-10 rounded-full border-2 border-[#120921] object-cover"
                 src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&h=100&q=80"
                 alt="Client avatar"
-                width={40}
-                height={40}
+                width="40"
+                height="40"
               />
-              <Image
+              <img
                 className="w-10 h-10 rounded-full border-2 border-[#120921] object-cover"
                 src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&h=100&q=80"
                 alt="Client avatar"
-                width={40}
-                height={40}
+                width="40"
+                height="40"
               />
-              <Image
+              <img
                 className="w-10 h-10 rounded-full border-2 border-[#120921] object-cover"
                 src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=100&h=100&q=80"
                 alt="Client avatar"
-                width={40}
-                height={40}
+                width="40"
+                height="40"
               />
               <div className="flex items-center justify-center w-10 h-10 rounded-full border-2 border-[#120921] bg-orange-500 text-white text-xs font-bold">
                 +

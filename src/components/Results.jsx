@@ -1,4 +1,3 @@
-import Image from 'next/image';
 
 function Results() {
   return (
@@ -27,12 +26,10 @@ function Results() {
           {/* Card 1: Large eCommerce case (Col span 7) */}
           <div className="lg:col-span-7 rounded-3xl border border-[#2e1f44]/10 bg-[#f7f4ef] overflow-hidden flex flex-col justify-between shadow-sm hover:shadow-2xl transition-all duration-500 group">
             <div className="w-full h-80 overflow-hidden relative">
-              <Image 
+              <img 
                 src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1200&q=80" 
                 alt="Apex Apparel ecommerce" 
-                fill
-                sizes="(max-width: 1024px) 100vw, 700px"
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#f7f4ef] via-transparent to-transparent opacity-90"></div>
             </div>

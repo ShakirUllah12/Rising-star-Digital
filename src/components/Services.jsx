@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from 'react';
-import Image from 'next/image';
 
 const services = [
   {
@@ -155,13 +154,10 @@ function Services() {
                   opacity: activeIdx === idx ? 0.28 : 0
                 }}
               >
-                <Image
+                <img
                   src={service.image}
                   alt={service.title}
-                  fill
-                  sizes="100vw"
-                  priority={idx === 0}
-                  className="object-cover"
+                  className="absolute inset-0 w-full h-full object-cover"
                 />
               </div>
             ))}
