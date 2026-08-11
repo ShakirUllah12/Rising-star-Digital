@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import Navbar from '../components/Navbar';
 import Hero from '../components/Hero';
 import Ticker from '../components/Ticker';
