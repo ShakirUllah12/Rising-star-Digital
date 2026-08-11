@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rising-star-digital.vercel.app/sitemap.xml
