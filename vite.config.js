@@ -1,2 +1,7 @@
-// Deprecated: Project migrated to Next.js. Configured via next.config.mjs.
-export default {};
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react()],
+})
