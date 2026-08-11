@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 function SiteLoader() {
   const [stage, setStage] = useState('logo'); // 'logo', 'welcome', 'hidden'
@@ -11,7 +11,9 @@ function SiteLoader() {
     try {
       seen = sessionStorage.getItem('rsd-intro-seen') === '1';
       sessionStorage.setItem('rsd-intro-seen', '1');
-    } catch (_) {}
+    } catch {
+      // ignore session storage errors
+    }
 
     if (seen) {
       // Short-circuit loader if already seen

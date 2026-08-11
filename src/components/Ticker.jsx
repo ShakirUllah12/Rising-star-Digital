@@ -1,5 +1,3 @@
-import React from 'react';
-
 const tickerItems = [
   'Performance Marketing',
   'SEO & Content',
